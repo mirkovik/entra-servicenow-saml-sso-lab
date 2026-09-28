@@ -30,7 +30,7 @@ The environment includes:
 - Separate End User and IT Support identities
 - End-to-end validation through a ServiceNow incident workflow
 
-- ## End-to-End Architecture
+### End-to-End Architecture
 
 The lab validates the complete authentication and service workflow from the end user to IT support:
 
@@ -46,3 +46,85 @@ The lab validates the complete authentication and service workflow from the end 
 6. The end user accesses the ServiceNow portal and creates an incident.
 7. The IT Support user accesses the incident with the appropriate ITIL permissions.
 8. The support response becomes visible to the end user in ServiceNow.
+
+### Troubleshooting & Problems Solved
+
+A major part of this lab was troubleshooting the SAML authentication flow. The integration did not work immediately, and several issues had to be analyzed and resolved.
+
+### 1. Redirect Failed
+
+**Problem:**  
+The normal ServiceNow SSO login returned:
+
+`Redirect failed, please contact your administrator.`
+
+**Analysis:**  
+The Identity Provider connection test successfully redirected to Microsoft Entra ID and back to ServiceNow, but the normal login flow still failed. The ServiceNow Identity Provider was not active.
+
+**Resolution:**  
+The IdP activation was blocked by the mandatory connection-test requirement. The ServiceNow system property:
+
+`glide.authenticate.multisso.test.connection.mandatory`
+
+was temporarily set to `false`, allowing the IdP to be activated. After activation, the property was returned to `true`.
+
+### 2. SSO Certificate Validation Error
+
+**Problem:**  
+ServiceNow returned:
+
+`SSO certificate validation error`
+
+**Analysis:**  
+Multiple outdated or incorrect X.509 certificate entries were associated with the SAML configuration.
+
+**Resolution:**  
+The incorrect certificate entries were removed and the current Microsoft Entra SAML signing certificate was imported into ServiceNow.
+
+### 3. username_invalid_error
+
+**Problem:**  
+The SAML communication reached ServiceNow, but authentication failed with:
+
+`username_invalid_error`
+
+**Analysis:**  
+The ServiceNow NameID Policy was configured as `transient`, while the lab required a stable identity that could be matched to an existing ServiceNow user.
+
+**Resolution:**  
+The NameID format was changed to:
+
+`urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress`
+
+and Microsoft Entra ID was configured to use:
+
+`user.mail`
+
+as the identity source.
+
+### 4. User Not Found
+
+**Problem:**  
+Microsoft Entra ID sent the correct email identity, but ServiceNow still returned:
+
+`User not found`
+
+**Analysis:**  
+ServiceNow was searching for the authenticated identity in the `user_name` field instead of the `email` field.
+
+**Resolution:**  
+The ServiceNow system property:
+
+`glide.authenticate.multisso.login_locate.user_field`
+
+was changed from:
+
+`user_name`
+
+to:
+
+`email`
+
+The Identity Provider **User Field** was also configured as `email`.
+
+After these changes, ServiceNow successfully mapped the SAML identity to the corresponding user record.
