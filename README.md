@@ -128,3 +128,39 @@ to:
 The Identity Provider **User Field** was also configured as `email`.
 
 After these changes, ServiceNow successfully mapped the SAML identity to the corresponding user record.
+
+---
+
+### End-to-End Validation
+
+After resolving the SAML authentication and user-mapping issues, the complete workflow was successfully tested with two separate lab identities.
+
+### End User – Jelena
+
+Jelena was used as the End User identity.
+
+- Authenticated through Microsoft Entra ID
+- Signed in to ServiceNow through SAML 2.0 SSO
+- Successfully mapped to the corresponding ServiceNow user record
+- Accessed the ServiceNow Service Portal
+- Created incident `INC0010001` with the issue: **"Mein Outlook stürzt ab!"**
+
+### IT Support – Daniela
+
+Daniela was used as the IT Support identity.
+
+- Authenticated as a separate user
+- Assigned the ServiceNow `itil` role
+- Accessed the incident through the Service Operations Workspace
+- Opened and handled incident `INC0010001`
+- Added the response: **"Ich habe dein Outlook repariert!"**
+
+### Validation Result
+
+The response from IT Support became visible to the End User after refreshing the ServiceNow portal.
+
+This successfully validated the complete lab workflow:
+
+**End User → Microsoft Entra ID → SAML 2.0 SSO → ServiceNow User Mapping → Incident → IT Support → Response → End User**
+
+The test confirmed both **authentication** through Microsoft Entra ID and **authorization** through ServiceNow roles and permissions.
