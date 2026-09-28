@@ -29,3 +29,20 @@ The environment includes:
 - Role-Based Access Control (RBAC) with the ITIL role
 - Separate End User and IT Support identities
 - End-to-end validation through a ServiceNow incident workflow
+
+- ## End-to-End Architecture
+
+The lab validates the complete authentication and service workflow from the end user to IT support:
+
+**End User → Microsoft Entra ID → SAML 2.0 Authentication → ServiceNow → User Mapping → Role-Based Access → Incident → IT Support**
+
+### Authentication and Access Flow
+
+1. The end user starts the ServiceNow sign-in process.
+2. Microsoft Entra ID authenticates the user.
+3. Entra ID sends the SAML authentication response to ServiceNow.
+4. ServiceNow maps the authenticated identity to the corresponding user record using the email identity.
+5. ServiceNow roles determine what the authenticated user is authorized to access.
+6. The end user accesses the ServiceNow portal and creates an incident.
+7. The IT Support user accesses the incident with the appropriate ITIL permissions.
+8. The support response becomes visible to the end user in ServiceNow.
