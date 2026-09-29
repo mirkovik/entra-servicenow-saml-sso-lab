@@ -141,7 +141,7 @@ to:
 The Identity Provider **User Field** was also configured as `email`.
 
 After these changes, ServiceNow successfully mapped the SAML identity to the corresponding user record.
-
+**Troubleshooting evidence:** ServiceNow "User not found" error before correcting the user mapping configuration.
 ![ServiceNow user mapping troubleshooting](images/03-servicenow-user-mapping-troubleshooting.png)
 
 ---
