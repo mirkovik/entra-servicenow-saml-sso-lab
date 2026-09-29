@@ -31,12 +31,12 @@ The environment includes:
 - End-to-end validation through a ServiceNow incident workflow
 
 
-### Microsoft Entra ID – <img width="1921" height="1034" alt="image" src="https://github.com/user-attachments/assets/3c870395-2319-47dd-ad96-b0589b7dc82e" />
-SAML Configuration
+### Microsoft Entra ID – SAML Configuration
+
+
 
 The Microsoft Entra Enterprise Application was configured for SAML 2.0 Single Sign-On with ServiceNow.
 
-![Microsoft Entra ID SAML configuration](images/01-entra-servicenow-saml-configuration.png)
 
 ### ServiceNow – Identity Provider Configuration
 
