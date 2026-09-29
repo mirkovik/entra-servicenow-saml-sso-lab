@@ -36,7 +36,7 @@ The environment includes:
 
 
 The Microsoft Entra Enterprise Application was configured for SAML 2.0 Single Sign-On with ServiceNow.
-
+![Microsoft Entra ID SAML configuration](images/01-entra-servicenow-saml-configuration.png)
 
 ### ServiceNow – Identity Provider Configuration
 
@@ -169,7 +169,7 @@ Daniela was used as the IT Support identity.
 - Accessed the incident through the Service Operations Workspace
 - Opened and handled incident `INC0010001`
 - Added the response: **"Ich habe dein Outlook repariert!"**
-![ServiceNow IT Support incident response](images/05-servicenow-it-support-incident-response.png)
+![ServiceNow IT Support incident response](images/06-servicenow-incident-support-workflow.png)
 ### Validation Result
 
 The response from IT Support became visible to the End User after refreshing the ServiceNow portal.
