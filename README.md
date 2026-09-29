@@ -30,6 +30,19 @@ The environment includes:
 - Separate End User and IT Support identities
 - End-to-end validation through a ServiceNow incident workflow
 
+
+### Microsoft Entra ID – <img width="1921" height="1034" alt="image" src="https://github.com/user-attachments/assets/3c870395-2319-47dd-ad96-b0589b7dc82e" />
+SAML Configuration
+
+The Microsoft Entra Enterprise Application was configured for SAML 2.0 Single Sign-On with ServiceNow.
+
+![Microsoft Entra ID SAML configuration](images/01-entra-servicenow-saml-configuration.png)
+
+### ServiceNow – Identity Provider Configuration
+
+The ServiceNow Identity Provider was configured to establish the SAML trust and authentication flow with Microsoft Entra ID.
+
+![ServiceNow Identity Provider configuration](images/02-servicenow-identity-provider-configuration.png)
 ### End-to-End Architecture
 
 The lab validates the complete authentication and service workflow from the end user to IT support:
@@ -129,6 +142,8 @@ The Identity Provider **User Field** was also configured as `email`.
 
 After these changes, ServiceNow successfully mapped the SAML identity to the corresponding user record.
 
+![ServiceNow user mapping troubleshooting](images/03-servicenow-user-mapping-troubleshooting.png)
+
 ---
 
 ### End-to-End Validation
@@ -144,7 +159,7 @@ Jelena was used as the End User identity.
 - Successfully mapped to the corresponding ServiceNow user record
 - Accessed the ServiceNow Service Portal
 - Created incident `INC0010001` with the issue: **"Mein Outlook stürzt ab!"**
-
+![Successful ServiceNow SSO end-user login](images/04-servicenow-successful-sso-end-user.png)
 ### IT Support – Daniela
 
 Daniela was used as the IT Support identity.
@@ -154,7 +169,7 @@ Daniela was used as the IT Support identity.
 - Accessed the incident through the Service Operations Workspace
 - Opened and handled incident `INC0010001`
 - Added the response: **"Ich habe dein Outlook repariert!"**
-
+![ServiceNow IT Support incident response](images/05-servicenow-it-support-incident-response.png)
 ### Validation Result
 
 The response from IT Support became visible to the End User after refreshing the ServiceNow portal.
