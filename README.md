@@ -180,3 +180,20 @@ This successfully validated the complete lab workflow:
 **End User → Microsoft Entra ID → SAML 2.0 SSO → ServiceNow User Mapping → Incident → IT Support → Response → End User**
 
 The test confirmed both **authentication** through Microsoft Entra ID and **authorization** through ServiceNow roles and permissions.
+---
+
+## Skills Demonstrated
+
+This hands-on lab project demonstrates practical experience with:
+
+- Microsoft Entra ID and Enterprise Applications
+- SAML 2.0 Single Sign-On (SSO)
+- ServiceNow Multi-Provider SSO
+- X.509 certificate trust and troubleshooting
+- NameID and SAML attribute mapping
+- Identity and user mapping
+- User and group-based application access
+- Role-Based Access Control (RBAC) and the ServiceNow `itil` role
+- Authentication and authorization concepts
+- SSO troubleshooting and root-cause analysis
+- End-to-end IAM workflow validation
