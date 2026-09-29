@@ -160,6 +160,7 @@ Jelena was used as the End User identity.
 - Accessed the ServiceNow Service Portal
 - Created incident `INC0010001` with the issue: **"Mein Outlook stürzt ab!"**
 ![Successful ServiceNow SSO end-user login](images/04-servicenow-successful-sso-end-user.png)
+
 ### IT Support – Daniela
 
 Daniela was used as the IT Support identity.
