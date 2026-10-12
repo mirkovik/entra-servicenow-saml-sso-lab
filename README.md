@@ -197,3 +197,13 @@ This hands-on lab project demonstrates practical experience with:
 - Authentication and authorization concepts
 - SSO troubleshooting and root-cause analysis
 - End-to-end IAM workflow validation
+
+- ## Technical Backup & Recovery
+
+As part of this hands-on Microsoft Entra ID and ServiceNow SAML 2.0 SSO lab, selected ServiceNow configuration records were exported and documented for backup and recovery reference.
+
+The [`backup-files/`](backup-files/) directory contains technical XML exports and a dedicated [Backup & Recovery Guide](backup-files/README.md), including configuration details, file descriptions, restoration considerations, and security guidance.
+
+These exports represent selected configuration records rather than a complete ServiceNow instance backup. Additional supporting materials are maintained separately in the local project documentation.
+
+**Security note:** This project is intended for educational and demonstration purposes. Configuration exports must be reviewed for sensitive information before public distribution.
