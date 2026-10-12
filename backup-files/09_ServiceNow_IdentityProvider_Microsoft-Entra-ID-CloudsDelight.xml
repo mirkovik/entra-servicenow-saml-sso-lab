@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-07 14:54:37">
+<saml2_update1_properties action="INSERT_OR_UPDATE">
+<active>true</active>
+<audience>https://dev356981.service-now.com</audience>
+<authncontextcassref_method>urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport</authncontextcassref_method>
+<auto_provision>false</auto_provision>
+<auto_update_user>true</auto_update_user>
+<client_type/>
+<clock_skew>180</clock_skew>
+<continuous_auth_sso_consumer_url>https://dev356981.service-now.com/api/now/continuous_authentication/high_assurance/saml/consumer</continuous_auth_sso_consumer_url>
+<continuous_auth_sso_script display_value="">40bca6bb43434210096f60adaab8f2cc</continuous_auth_sso_script>
+<continuous_authentication_configured>false</continuous_authentication_configured>
+<createrequestedauthncontext>false</createrequestedauthncontext>
+<default>true</default>
+<encrypt_assertion>false</encrypt_assertion>
+<encryption_key_alias/>
+<encryption_key_password/>
+<esig_approval_consumer_url>https://dev356981.service-now.com/consumer.do</esig_approval_consumer_url>
+<esig_assert_consumer_serv_idx>1</esig_assert_consumer_serv_idx>
+<esig_idp_authnrequest_url/>
+<esig_popup_dlg_height>300</esig_popup_dlg_height>
+<esig_popup_dlg_width>500</esig_popup_dlg_width>
+<external_logout_redirect>external_logout_complete.do</external_logout_redirect>
+<failed_requirement_redirect/>
+<federation display_value=""/>
+<force_authn>false</force_authn>
+<groups_for_imported_users/>
+<idp>https://sts.windows.net/07284a66-2021-4bad-9301-189f1b69cd85/</idp>
+<idp_authnrequest_binding>urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect</idp_authnrequest_binding>
+<idp_authnrequest_url>https://login.microsoftonline.com/07284a66-2021-4bad-9301-189f1b69cd85/saml2</idp_authnrequest_url>
+<idp_logout_binding>urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect</idp_logout_binding>
+<idp_logout_response_binding>urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect</idp_logout_response_binding>
+<idp_logout_url>https://login.microsoftonline.com/07284a66-2021-4bad-9301-189f1b69cd85/saml2</idp_logout_url>
+<idp_metadata_url>https://login.microsoftonline.com/07284a66-2021-4bad-9301-189f1b69cd85/federationmetadata/2007-06/federationmetadata.xml?appid=2cd2e0e8-53a3-4e76-b367-fb71d5ceaab4</idp_metadata_url>
+<idp_metadata_xml/>
+<is_passive>false</is_passive>
+<is_primary>false</is_primary>
+<is_test_connection_successful>false</is_test_connection_successful>
+<issuer>https://dev356981.service-now.com</issuer>
+<last_successful_test_connection/>
+<logo_url/>
+<logout_script display_value=""/>
+<name>Microsoft Entra ID &amp; CloudsDelight</name>
+<nameid_attribute/>
+<nameid_policy>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</nameid_policy>
+<popup_dlg_height>800</popup_dlg_height>
+<popup_dlg_width>900</popup_dlg_width>
+<require_signed_authnrequest>false</require_signed_authnrequest>
+<require_signed_logoutrequest>false</require_signed_logoutrequest>
+<service_url>https://dev356981.service-now.com/navpage.do</service_url>
+<show_as_login_option>true</show_as_login_option>
+<sign_algorithmuri>http://www.w3.org/2001/04/xmldsig-more#rsa-sha256</sign_algorithmuri>
+<sign_logout_response>false</sign_logout_response>
+<signing_key_alias/>
+<signing_key_password/>
+<sso_label>Mit SSO anmelden</sso_label>
+<sso_script display_value="MultiSSOv2_SAML2_custom">48d518ff73022300ec77bd49faf6a7f6</sso_script>
+<sys_class_name>saml2_update1_properties</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-09-25 13:05:00</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_id>16e2bd6d93e7cb106e9cf14fdd03d68f</sys_id>
+<sys_mod_count>8</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-09-27 00:32:14</sys_updated_on>
+<transform_map display_value="u_imp_saml_user_25vpnmabip">04f271ed93e7cb106e9cf14fdd03d603</transform_map>
+<u_user_id_suffix>@cloudsdelight.net</u_user_id_suffix>
+<user_field>email</user_field>
+<x509_certificate display_value=""/>
+</saml2_update1_properties>
+</unload>

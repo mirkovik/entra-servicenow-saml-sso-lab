@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-07 14:40:22">
+<sys_script_include action="INSERT_OR_UPDATE">
+<access>package_private</access>
+<active>true</active>
+<api_name>global.MultiSSOv2_SAML2_custom</api_name>
+<caller_access/>
+<client_callable>false</client_callable>
+<description>Logic to process SAML 2.0 Update 1 authentication for a multi-tenant single sign-on</description>
+<mobile_callable>false</mobile_callable>
+<name>MultiSSOv2_SAML2_custom</name>
+<sandbox_callable>false</sandbox_callable>
+<script><![CDATA[gs.include("PrototypeServer");
+
+var MultiSSOv2_SAML2_custom = Class.create();
+MultiSSOv2_SAML2_custom.prototype = Object.extend(new MultiSSOv2_SAML2_internal(), {
+    initialize: function() {
+		MultiSSOv2_SAML2_internal.prototype.initialize.call(this);
+    },
+	
+	type: 'MultiSSOv2_SAML2_custom'
+});]]></script>
+<sys_class_name>sys_script_include</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2018-12-04 22:02:52</sys_created_on>
+<sys_id>48d518ff73022300ec77bd49faf6a7f6</sys_id>
+<sys_mod_count>1</sys_mod_count>
+<sys_name>MultiSSOv2_SAML2_custom</sys_name>
+<sys_package display_value="Integration - Multiple Provider Single Sign-On (do not activate...use 'Integration - Multiple Provid" source="com.snc.integration.sso.multi">28f22fa493e707106e9cf14fdd03d68f</sys_package>
+<sys_policy/>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>sys_script_include_48d518ff73022300ec77bd49faf6a7f6</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2018-12-18 19:24:55</sys_updated_on>
+</sys_script_include>
+</unload>
