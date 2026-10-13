@@ -48,3 +48,15 @@ All configuration exports and screenshots should be reviewed for sensitive infor
 ## Project Scope
 
 This repository documents a successfully tested learning environment. It is not a production deployment, a complete disaster recovery package, or a guaranteed automated restoration solution.
+
+## Backup Screenshots
+
+The following screenshots provide supporting evidence of the ServiceNow SAML configuration and the locally exported XML backup files.
+
+### ServiceNow Identity Provider Configuration
+
+![ServiceNow Identity Provider Configuration](images/07-backup-servicenow-identity-provider.png)
+
+### Exported XML Backup Files
+
+![Exported ServiceNow XML Backup Files](images/08-backup-xml-files.png)
