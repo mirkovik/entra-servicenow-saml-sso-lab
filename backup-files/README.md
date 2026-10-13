@@ -55,8 +55,6 @@ The following screenshots provide supporting evidence of the ServiceNow SAML con
 
 ### ServiceNow Identity Provider Configuration
 
-![ServiceNow Identity Provider Configuration](images/07-backup-servicenow-identity-provider.png)
+![ServiceNow Identity Provider Configuration](../images/07-backup-servicenow-identity-provider.png)
 
-### Exported XML Backup Files
-
-![Exported ServiceNow XML Backup Files](images/08-backup-xml-files.png)
+![Exported ServiceNow XML Backup Files](../images/08-backup-xml-files.png)
